@@ -1,19 +1,16 @@
 "use strict";
 
-import Header from './Header';
+import React from 'react';
+import { Link } from 'react-router';
 
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import Logo from './LogoContainer';
+import Usermenu from './UsermenuContainer';
 
-import * as headerActions from './actionCreators';
-
-const mapStateToProps = (state) => (
-    {
-        username: 'hi! '+state.appState.currentUser.username,
-        isUsermenuOn: state.appState.isUsermenuOn
-    }
+const Header = () => (
+    <div className='header-wrapper'>
+        <Logo />
+        <Usermenu />
+    </div>
 );
 
-const mapDispatchToProps = (dispatch) => bindActionCreators(headerActions, dispatch);
-
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default Header;
