@@ -62,3 +62,5 @@ modules/
 # env setup
 data/db/*
 test/test.html
+
+docs/bundle.js

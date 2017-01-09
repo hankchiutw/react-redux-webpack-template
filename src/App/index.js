@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import Header from './Header';
+import Header from './Header/';
 import Nav from './Nav';
 
 const App = ({children}) => {

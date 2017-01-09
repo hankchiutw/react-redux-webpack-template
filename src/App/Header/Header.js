@@ -3,10 +3,10 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const Header = () => {
+const Header = ({username, isUsermenuOn, toggleUsermenu, toggleNav}) => (
 
-    return <div className='header-wrapper'>
-        <span className='logo cell hidden-xs'><img src='img/logo.png' /></span>
+    <div className='header-wrapper'>
+        <span className='logo cell hidden-xs' onClick={toggleNav}><img src='img/logo.png' /></span>
 
         <span className='visible-xs-inline pull-left cell'>
             <i className='fa fa-bars fa-lg'></i>
@@ -16,9 +16,9 @@ const Header = () => {
             <i className='fa fa-long-arrow-left fa-lg'></i>
         </span>
 
-        <div className="dropdown pull-right cell user-menu-cell">
+        <div className="dropdown pull-right cell user-menu-cell" onClick={toggleUsermenu}>
             <button className="btn dropdown-toggle" type="button">
-                <span>username</span>
+                <span>{username}</span>
                 <span className="caret"></span>
             </button>
             <ul className="dropdown-menu dropdown-menu-right on">
@@ -28,7 +28,7 @@ const Header = () => {
             </ul>
         </div>
 
-    </div>;
-};
+    </div>
+);
 
 export default Header;

@@ -9,7 +9,6 @@ Source code [here](https://github.com/hankchiutw/react-redux-webpack-demo).
 ├── docs            # root path of dev server
 │   ├── css/
 │   ├── img/
-│   ├── view/
 │   ├── bundle.js   # built bundle file
 │   ├── favicon.ico
 │   └── index.html
