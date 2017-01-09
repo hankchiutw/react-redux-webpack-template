@@ -128,11 +128,11 @@ a{
     z-index: 50;
     margin-right: 30px;
     position: fixed;
-    left: 0;
+    left: -200px;
 }
 
-.nav-wrapper.off{
-    left: -200px;
+.nav-wrapper.on{
+    left: 0;
 }
 
 
@@ -155,12 +155,12 @@ a{
 @media (max-width: 767px){
     .nav-wrapper{
         position: fixed;
-        left: 0;
+        left: -200px;
         border-right: solid 1px #ccc;
     }
 
-    .nav-wrapper.off{
-        left: -200px;
+    .nav-wrapper.on{
+        left: 0;
     }
 
     .content-mask{
