@@ -4,6 +4,7 @@ import React from 'react';
 
 import Header from './Header/';
 import Nav from './Nav/';
+import Content from './Content/';
 
 const App = ({children}) => {
 
@@ -11,10 +12,7 @@ const App = ({children}) => {
         <div>
             <Header />
             <Nav />
-            <div className='content-wrapper nav-on'>
-                <h2>!</h2>
-                <div className='content-ui-view'>{children}</div>
-            </div>
+            <Content children={children} />
         </div>
     );
 };
