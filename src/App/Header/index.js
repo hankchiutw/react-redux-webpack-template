@@ -9,7 +9,8 @@ import * as headerActions from './actionCreators';
 
 const mapStateToProps = (state) => (
     {
-        username: 'hi!'+state.appState.currentUser.username
+        username: 'hi! '+state.appState.currentUser.username,
+        isUsermenuOn: state.appState.isUsermenuOn
     }
 );
 

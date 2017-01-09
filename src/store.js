@@ -8,7 +8,9 @@ const preloadedState = {
 /*
         currentPage: '',
 */
-        currentUser: {},
+        currentUser: {
+            username: 'Guest'
+        },
         isNavOn: true,
         isUsermenuOn: false
     }

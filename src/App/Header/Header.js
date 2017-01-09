@@ -3,7 +3,9 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const Header = ({username, isUsermenuOn, toggleUsermenu, toggleNav}) => (
+import Usermenu from './Usermenu';
+
+const Header = ({username, toggleUsermenu, isUsermenuOn, toggleNav}) => (
 
     <div className='header-wrapper'>
         <span className='logo cell hidden-xs' onClick={toggleNav}><img src='img/logo.png' /></span>
@@ -16,17 +18,7 @@ const Header = ({username, isUsermenuOn, toggleUsermenu, toggleNav}) => (
             <i className='fa fa-long-arrow-left fa-lg'></i>
         </span>
 
-        <div className="dropdown pull-right cell user-menu-cell" onClick={toggleUsermenu}>
-            <button className="btn dropdown-toggle" type="button">
-                <span>{username}</span>
-                <span className="caret"></span>
-            </button>
-            <ul className="dropdown-menu dropdown-menu-right on">
-                <li>
-                    <Link to='/' className='user-menu-anchor'>Home</Link>
-                </li>
-            </ul>
-        </div>
+        <Usermenu {...{username, toggleUsermenu, isUsermenuOn}} />
 
     </div>
 );
