@@ -10,6 +10,7 @@ const Nav = ({isOn}) => {
             <div className='nav-wrapper'>
                 <Link to='/' className='item' activeClassName='on' onlyActiveOnIndex={true}>Home</Link>
                 <Link to='/page1' className='item' activeClassName='on'>Page1</Link>
+                <Link to='/new-component-flow' className='item' activeClassName='on'>New component flow</Link>
             </div>
             <div className='content-mask'></div>
         </div>
