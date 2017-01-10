@@ -2,17 +2,17 @@
 
 import React from 'react';
 
-const Content = ({isNavOn, children}) => {
-
+const Content = ({isNavOn, children, label}) => {
     return (
         <div className='content-wrapper' ref={_domRef}>
-            <h2>!</h2>
+            <h2>{label}</h2>
             <div className='content-ui-view'>{children}</div>
         </div>
     );
 
     /**
      * Listen to props and change style
+     * TODO: use component style
      */
     function _domRef(dom){
         if(!dom) return;

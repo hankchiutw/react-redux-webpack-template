@@ -6,13 +6,18 @@ import Header from './Header/';
 import Nav from './Nav/';
 import Content from './Content/';
 
-const App = ({children}) => {
+const PATH_LABEL = {
+    '/': '首頁',
+    '/page1': 'Page1'
+};
+
+const App = ({children, location, route}) => {
 
     return (
         <div>
             <Header />
             <Nav />
-            <Content children={children} />
+            <Content children={children} label={PATH_LABEL[location.pathname]} />
         </div>
     );
 };
