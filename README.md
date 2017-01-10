@@ -13,8 +13,15 @@ Source code [here](https://github.com/hankchiutw/react-redux-webpack-template).
 │   ├── favicon.ico
 │   └── index.html
 ├── src
-│   ├── App/
-│   ├── Page1/
+│   ├── App
+│   │   ├── Content/
+│   │   ├── Header/
+│   │   ├── Nav/
+│   │   ├── appReducer.js
+│   │   ├── Home.js
+│   │   └── index.js
+│   ├── Page1
+│   │   └── index.js
 │   ├── index.js    # entry point
 │   ├── reducers.js
 │   ├── routes.js
@@ -35,6 +42,7 @@ Source code [here](https://github.com/hankchiutw/react-redux-webpack-template).
 - Messaging system
 - Uglified and minimized bundle.js
 - yarn
+- Ready for [redux devtools](https://github.com/gaearon/redux-devtools) and [react devtools](https://github.com/facebook/react-devtools).
 
 ### Pre-install
 
@@ -42,20 +50,18 @@ Source code [here](https://github.com/hankchiutw/react-redux-webpack-template).
 npm install -g webpack webpack-dev-server
 ```
 
-### Install
-
-```sh
-yarn install
-```
+Install [yarn](https://yarnpkg.com/en/docs/install).
 
 ### Development
 
 ```sh
+yarn install
 yarn start # local dev environment
 ```
 Browse http://localhost:8080
 
 ### ToDo
+- In-component style
 
 ### References
 - [A Better File Structure For React/Redux Applications](http://marmelab.com/blog/2015/12/17/react-directory-structure.html)
