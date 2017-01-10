@@ -42,21 +42,26 @@ a{
 .loading-wrapper,
 .message-wrapper{
     position: fixed;
-    top: -50px;
     height: 50px;
     width: 100%;
     font-size: 16px;
     text-align: center;
     padding: 10px 0px;
     z-index: 9999;
-    opacity: 0;
-    transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    animation: showup 3s ease-in-out 1;
+}
+@keyframes showup {
+    0% { top: -50px; opacity: 0; }
+    20% { top: 6px; opacity: 1; }
+    50% { top: 6px; opacity: 1; }
+    80% { top: 6px; opacity: 1; }
+    100% { top: -50px; opacity: 0; }
 }
 
-.loading-wrapper{
+.message-wrapper{
     background-color: rgba(255, 255, 255, 0);
 }
-.loading-wrapper img{
+.message-wrapper img{
     height: 100%;
     animation:spin 1s linear infinite;
 }

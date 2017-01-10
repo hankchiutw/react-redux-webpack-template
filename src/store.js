@@ -11,6 +11,7 @@ const preloadedState = {
         currentUser: {
             username: 'Guest'
         },
+        message: '',
         isNavOn: true,
         isUsermenuOn: false
     }

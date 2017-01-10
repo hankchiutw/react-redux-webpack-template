@@ -5,6 +5,7 @@ import React from 'react';
 import Header from './Header/';
 import Nav from './Nav/';
 import Content from './Content/';
+import Alert from './Alert/';
 
 const PATH_LABEL = {
     '/': '首頁',
@@ -18,6 +19,7 @@ const App = ({children, location, route}) => {
             <Header />
             <Nav />
             <Content children={children} label={PATH_LABEL[location.pathname]} />
+            <Alert />
         </div>
     );
 };
