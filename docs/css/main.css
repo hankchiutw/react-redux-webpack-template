@@ -140,16 +140,11 @@ a{
     background-color: #0a9488;
 }
 
-.nav-wrapper .item a{
+.nav-wrapper .item{
     color: white;
-    margin-left: 40px;
-    padding: 8px 0;
+    padding: 8px 0 8px 40px;
     display: block;
     text-decoration: none;
-}
-
-.nav-wrapper .item{
-    margin: 0;
 }
 
 @media (max-width: 767px){

@@ -8,9 +8,8 @@ const Nav = ({isOn}) => {
     return (
         <div ref={_domRef}>
             <div className='nav-wrapper'>
-                <p className='item'>
-                    <Link to='/page1'>Page1</Link>
-                </p>
+                <Link to='/' className='item' activeClassName='on' onlyActiveOnIndex={true}>Home</Link>
+                <Link to='/page1' className='item' activeClassName='on'>Page1</Link>
             </div>
             <div className='content-mask'></div>
         </div>
