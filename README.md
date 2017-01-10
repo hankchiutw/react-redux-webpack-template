@@ -1,7 +1,7 @@
 # react-redux-webpack-template
 Simple SPA(single page application) using [react-redux](https://github.com/reactjs/react-redux), [react-router](https://github.com/ReactTraining/react-router) and [webpack](http://webpack.github.io/docs/).
 
-Source code [here](https://github.com/hankchiutw/react-redux-webpack-demo).
+Source code [here](https://github.com/hankchiutw/react-redux-webpack-template).
 
 ### Folder structure
 ```sh
