@@ -9,7 +9,7 @@ const mdConverter = new showdown.Converter();
 const mdHtml = { __html: mdConverter.makeHtml(mdRaw) };
 
 const NewComponentFlow = () => {
-    return <p dangerouslySetInnerHTML={mdHtml}></p>;
+  return <p dangerouslySetInnerHTML={mdHtml}></p>;
 };
 
 export default NewComponentFlow;

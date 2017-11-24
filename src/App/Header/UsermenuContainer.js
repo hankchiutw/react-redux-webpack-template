@@ -9,12 +9,12 @@ import { bindActionCreators } from 'redux';
 import { toggleUsermenu } from './actionCreators';
 
 const mapStateToProps = (state) => ({
-    username: 'hi! '+state.appState.currentUser.username,
-    isUsermenuOn: state.appState.isUsermenuOn
+  username: 'hi! '+state.appState.currentUser.username,
+  isUsermenuOn: state.appState.isUsermenuOn
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
-    toggleUsermenu
+  toggleUsermenu
 }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Usermenu);

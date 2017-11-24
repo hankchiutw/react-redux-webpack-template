@@ -9,12 +9,12 @@ import React from 'react';
 import { Router, Route, Link, hashHistory, IndexRoute } from 'react-router';
 
 export default (
-    <Router history={hashHistory}>
-        <Route path='/' component={App}>
-            <IndexRoute component={Home} />
+  <Router history={hashHistory}>
+    <Route path='/' component={App}>
+      <IndexRoute component={Home} />
 
-            <Route path='/page1' component={Page1} />
-            <Route path='/new-component-flow' component={NewComponentFlow} />
-        </Route>
-    </Router>
+      <Route path='/page1' component={Page1} />
+      <Route path='/new-component-flow' component={NewComponentFlow} />
+    </Route>
+  </Router>
 );

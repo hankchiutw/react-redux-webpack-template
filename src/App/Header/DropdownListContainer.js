@@ -9,12 +9,12 @@ import { bindActionCreators } from 'redux';
 import { alertMessage, alertLoading } from 'App/Alert/actionCreators';
 
 const mapStateToProps = (state) => ({
-    isOn: state.appState.isUsermenuOn
+  isOn: state.appState.isUsermenuOn
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
-    alertMessage,
-    alertLoading
+  alertMessage,
+  alertLoading
 }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(DropdownList);

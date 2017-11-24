@@ -6,9 +6,9 @@ import Nav from './Nav';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => (
-    {
-        isOn: state.appState.isNavOn
-    }
+  {
+    isOn: state.appState.isNavOn
+  }
 );
 
 export default connect(mapStateToProps)(Nav);

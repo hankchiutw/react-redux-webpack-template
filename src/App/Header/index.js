@@ -7,10 +7,10 @@ import Logo from './LogoContainer';
 import Usermenu from './UsermenuContainer';
 
 const Header = () => (
-    <div className='header-wrapper'>
-        <Logo />
-        <Usermenu />
-    </div>
+  <div className='header-wrapper'>
+    <Logo />
+    <Usermenu />
+  </div>
 );
 
 export default Header;

@@ -9,13 +9,13 @@ import { bindActionCreators } from 'redux';
 import { toggleNav } from './actionCreators';
 
 const mapStateToProps = (state) => (
-    {
-        isNavOn: state.appState.isNavOn
-    }
+  {
+    isNavOn: state.appState.isNavOn
+  }
 );
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
-    toggleNav
+  toggleNav
 }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Logo);

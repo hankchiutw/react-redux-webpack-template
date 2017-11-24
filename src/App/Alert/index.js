@@ -9,11 +9,11 @@ import { bindActionCreators } from 'redux';
 import { alertMessage } from './actionCreators';
 
 const mapStateToProps = (state) => ({
-    message: state.appState.message
+  message: state.appState.message
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
-    alertMessage
+  alertMessage
 }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Alert);

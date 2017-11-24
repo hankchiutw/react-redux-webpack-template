@@ -4,20 +4,20 @@ import { createStore } from 'redux';
 import rootReducer from './rootReducer';
 
 const preloadedState = {
-    appState: {
+  appState: {
 /*
-        currentPage: '',
+    currentPage: '',
 */
-        currentUser: {
-            username: 'Guest'
-        },
-        message: '',
-        isNavOn: true,
-        isUsermenuOn: false
-    }
-    //, page1State: {}
+    currentUser: {
+      username: 'Guest'
+    },
+    message: '',
+    isNavOn: true,
+    isUsermenuOn: false
+  }
+  //, page1State: {}
 };
 
 export default createStore(rootReducer, preloadedState,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
