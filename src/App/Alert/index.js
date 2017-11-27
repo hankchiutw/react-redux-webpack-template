@@ -1,19 +1,8 @@
 "use strict";
 
-import React from 'react';
-import Alert from './Alert';
+import Alert from './_redux/AlertContainer';
+import actions from './_redux/actions';
+import reducers from './_redux/reducers';
 
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-
-import { alertMessage } from './actionCreators';
-
-const mapStateToProps = (state) => ({
-  message: state.appState.message
-});
-
-const mapDispatchToProps = (dispatch) => bindActionCreators({
-  alertMessage
-}, dispatch);
-
-export default connect(mapStateToProps, mapDispatchToProps)(Alert);
+export default Alert;
+export { actions, reducers };

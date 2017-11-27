@@ -10,3 +10,4 @@ export const toggleNav = (state = true, action) => {
   return !state;
 };
 
+export default { toggleUsermenu, toggleNav };

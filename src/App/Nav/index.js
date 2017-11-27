@@ -1,14 +1,5 @@
 "use strict";
 
-import React from 'react';
-import Nav from './Nav';
+import Nav from './_redux/NavContainer';
 
-import { connect } from 'react-redux';
-
-const mapStateToProps = (state) => (
-  {
-    isOn: state.appState.isNavOn
-  }
-);
-
-export default connect(mapStateToProps)(Nav);
+export default Nav;

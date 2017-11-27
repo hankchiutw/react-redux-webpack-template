@@ -13,24 +13,23 @@ Source code is [here](https://github.com/hankchiutw/react-redux-webpack-template
 │   ├── favicon.ico
 │   └── index.html
 ├── src
+│   ├── _redux
+│   │   ├── rootReducer.js
+│   │   └── store.js
 │   ├── App
+│   │   ├── _redux/
 │   │   ├── Content/
 │   │   ├── Header/
 │   │   ├── Nav/
-│   │   ├── appReducer.js
-│   │   ├── Home.js
 │   │   └── index.js
 │   ├── Page1
 │   │   └── index.js
 │   ├── index.js    # entry point
-│   ├── reducers.js
-│   ├── routes.js
-│   └── store.js
+│   └── routes.js
 ├── package.json
 ├── README.md
 ├── webpack.config.js
 └── yarn.lock
-
 ```
 
 ### Features

@@ -1,12 +1,12 @@
 "use strict";
 
 import React from 'react';
-import Usermenu from './Usermenu';
+import Usermenu from '../Usermenu';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { toggleUsermenu } from './actionCreators';
+import { toggleUsermenu } from './actions';
 
 const mapStateToProps = (state) => ({
   username: 'hi! '+state.appState.currentUser.username,

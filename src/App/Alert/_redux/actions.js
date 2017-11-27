@@ -9,3 +9,4 @@ export const alertLoading = () => ({
   type: 'ALERT_LOADING'
 });
 
+export default { alertMessage, alertLoading };

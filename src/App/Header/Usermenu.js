@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import DropdownList from './DropdownListContainer';
+import DropdownList from './_redux/DropdownListContainer';
 
 const Usermenu = ({username, toggleUsermenu}) => {
   return (

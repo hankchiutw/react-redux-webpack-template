@@ -13,3 +13,5 @@ export const triggerAlert = (state = '', action) => {
       return state;
   }
 };
+
+export default { triggerAlert };

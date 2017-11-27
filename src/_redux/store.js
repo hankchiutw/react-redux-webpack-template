@@ -5,9 +5,7 @@ import rootReducer from './rootReducer';
 
 const preloadedState = {
   appState: {
-/*
-    currentPage: '',
-*/
+//    currentPage: '',
     currentUser: {
       username: 'Guest'
     },

@@ -1,12 +1,12 @@
 "use strict";
 
 import React from 'react';
-import Logo from './Logo';
+import Logo from '../Logo';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { toggleNav } from './actionCreators';
+import { toggleNav } from './actions';
 
 const mapStateToProps = (state) => (
   {

@@ -1,5 +1,8 @@
 # New component flow
-- Create presentational component
+- Create the presentational component
+- Put redux stuffs(actions, reduers, component containers) in a folder named `_redux`
+- export the container(or the component itself) in `index.js`
+- export actions, reducers if need
 - (optional)Create container component to invoke actions inside the component
     - map needed state and dispatch to props
     - do connect() and return
