@@ -4,7 +4,7 @@ import React from 'react';
 
 const Alert = ({message, alertMessage}) => {
   if(!message) return null;
-  if(message == 'loading') message = <img src="./img/loading.png" />;
+  if(message == 'loading') message = <img src="/images/loading.png" />;
   else message = <span className='center cell'>{message}</span>;
 
   setTimeout(() => {

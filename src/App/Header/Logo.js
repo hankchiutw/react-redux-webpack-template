@@ -16,7 +16,7 @@ const Logo = ({isNavOn, toggleNav}) => {
 
   return (
     <span className='logo'>
-      <span className='cell hidden-xs' onClick={toggleNav}><img src='img/logo.png' /></span>
+      <span className='cell hidden-xs' onClick={toggleNav}><img src='/images/logo.png' /></span>
       { anchorForMobile }
 
     </span>
