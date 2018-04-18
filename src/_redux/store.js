@@ -3,7 +3,7 @@
 import { createStore } from 'redux';
 import rootReducer from './rootReducer';
 
-const preloadedState = {
+export const preloadedState = {
   appState: {
 //    currentPage: '',
     currentUser: {
