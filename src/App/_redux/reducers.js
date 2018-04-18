@@ -2,7 +2,9 @@
 
 export const checkCurrentUser = (state = {}, action) => {
   if (action.type != 'CHECK_CURRENT_USER') {
-    return state;
+    return {
+      username: 'Guest'
+    };
   }
 
   return state;

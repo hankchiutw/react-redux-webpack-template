@@ -42,7 +42,8 @@ let config = {
             options: {
               presets: [
                 'es2015',
-                'react'
+                'react',
+                'stage-2'
               ]
             }
           }
