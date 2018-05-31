@@ -1,12 +1,21 @@
-"use strict";
-
 import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import Home from 'Home';
+import Page1 from 'Page1';
+import NewComponentFlow from 'NewComponentFlow';
 
-const Content = ({isNavOn, children, label}) => {
+
+const Content = ({ isNavOn, label }) => {
   return (
-    <div className='content-wrapper' ref={_domRef}>
+    <div className="content-wrapper" ref={_domRef}>
       <h2>{label}</h2>
-      <div className='content-ui-view'>{children}</div>
+      <div className="content-ui-view">
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/page1" component={Page1} />
+          <Route path="/new-component-flow" component={NewComponentFlow} />
+        </Switch>
+      </div>
     </div>
   );
 
@@ -14,13 +23,12 @@ const Content = ({isNavOn, children, label}) => {
    * Listen to props and change style
    * TODO: use component style
    */
-  function _domRef(dom){
-    if(!dom) return;
+  function _domRef(dom) {
+    if (!dom) return;
 
-    if(isNavOn){
+    if (isNavOn) {
       dom.classList.add('nav-on');
-    }
-    else{
+    } else {
       dom.classList.remove('nav-on');
     }
   }

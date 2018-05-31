@@ -1,5 +1,3 @@
-"use strict";
-
 import React from 'react';
 
 import Header from './Header';
@@ -9,7 +7,7 @@ import Alert from './Alert';
 
 import combinedReducer from './_redux/combinedReducer';
 
-const App = ({children, location, route}) => {
+const App = ({ location }) => {
   const label = ({
     '/': 'Home',
     '/page1': 'Page1'
@@ -19,7 +17,7 @@ const App = ({children, location, route}) => {
     <div>
       <Header />
       <Nav />
-      <Content children={children} label={label} />
+      <Content label={label} />
       <Alert />
     </div>
   );

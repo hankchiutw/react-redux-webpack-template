@@ -1,34 +1,55 @@
-"use strict";
-
 const path = require('path');
-const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 let config = {
-  entry: "./src/index.js",
+  entry: './src/index.js',
   output: {
     path: path.join(__dirname, './docs'),
-    filename: "bundle.js",
-    publicPath: '/'
+    filename: '[name].bundle.js',
+    chunkFilename: '[name].bundle.js',
+    publicPath: './'
+  },
+  devtool: 'inline-source-map',
+  devServer: {
+    contentBase: './docs',
+    hot: true
   },
   resolve: {
     modules: [
       path.join(__dirname, 'src'),
+      path.join(__dirname, 'src/styles'),
       path.join(__dirname, './'),
       'node_modules'
     ]
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      template: 'src/index.html'
+    }),
+    new CopyWebpackPlugin([
+      { from: 'src/*.png', flatten: true },
+      { from: 'src/images', to: 'images' },
+      'src/favicon.ico',
+      'src/manifest.json'
+    ]),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css'
+    })
   ],
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /(node_modules)/,
-        loader: "babel-loader",
+        loader: 'babel-loader',
         options: {
           presets: [
             'es2015',
-            'react'
+            'react',
+            'stage-0'
           ]
         }
       },
@@ -36,14 +57,14 @@ let config = {
         test: /\.jsx$/,
         include: path.join(__dirname, 'src'),
         use: [
-          "react-hot-loader",
+          'react-hot-loader',
           {
-            loader: "babel-loader",
+            loader: 'babel-loader',
             options: {
               presets: [
                 'es2015',
                 'react',
-                'stage-2'
+                'stage-0'
               ]
             }
           }
@@ -51,23 +72,18 @@ let config = {
       },
       {
         test: /\.md$/,
-        loader: "raw-loader"
+        loader: 'raw-loader'
       },
       {
-        test: /\.css$/,
-        loader: "style-loader"
+        test: /\.(scss|css)$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          { loader: 'css-loader' },
+          { loader: 'sass-loader' }
+        ]
       }
     ]
   }
 };
-
-if (process.env.NODE_ENV == 'prod') {
-  config.plugins.push(new webpack.optimize.UglifyJsPlugin({
-    compress: {
-      warnings: false
-    },
-    minimize: true
-  }));
-}
 
 module.exports = config;

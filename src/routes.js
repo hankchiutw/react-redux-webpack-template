@@ -1,5 +1,3 @@
-"use strict";
-
 /**
  *  Routing definition is independant from Redux.
  *  Top level component App defines the layout.
@@ -7,20 +5,13 @@
  */
 
 import React from 'react';
-import { Router, Route, Link, hashHistory, IndexRoute } from 'react-router';
+import { HashRouter as Router, withRouter } from 'react-router-dom';
 
 import App from 'App';
-import Home from 'Home';
-import Page1 from 'Page1';
-import NewComponentFlow from 'NewComponentFlow';
 
+const AppWithRouter = withRouter(App);
 export default (
-  <Router history={hashHistory}>
-    <Route path='/' component={App}>
-      <IndexRoute component={Home} />
-
-      <Route path='/page1' component={Page1} />
-      <Route path='/new-component-flow' component={NewComponentFlow} />
-    </Route>
+  <Router>
+    <AppWithRouter />
   </Router>
 );

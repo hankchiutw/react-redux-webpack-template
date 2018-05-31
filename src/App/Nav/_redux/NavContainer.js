@@ -1,9 +1,8 @@
-"use strict";
-
 import React from 'react';
+import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 import Nav from '../Nav';
 
-import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => (
   {
@@ -11,4 +10,4 @@ const mapStateToProps = (state) => (
   }
 );
 
-export default connect(mapStateToProps)(Nav);
+export default withRouter(connect(mapStateToProps)(Nav));

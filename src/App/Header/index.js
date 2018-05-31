@@ -1,7 +1,6 @@
 "use strict";
 
 import React from 'react';
-import { Link } from 'react-router';
 
 import actions from './_redux/actions';
 import reducers from './_redux/reducers';
