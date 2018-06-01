@@ -1,5 +1,1 @@
-"use strict";
-
-import NewComponentTemplate from './_redux/NewComponentTemplateContainer';
-
-export default NewComponentTemplate;
+export { default } from './_redux/NewComponentTemplateContainer';

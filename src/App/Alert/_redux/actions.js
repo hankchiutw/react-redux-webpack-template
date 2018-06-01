@@ -1,5 +1,3 @@
-"use strict";
-
 export const alertMessage = (message) => ({
   type: 'ALERT_MESSAGE',
   message

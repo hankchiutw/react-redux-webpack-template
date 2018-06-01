@@ -1,30 +1,27 @@
-"use strict";
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const DropdownList = ({isOn, alertMessage, alertLoading}) => {
-  return (
-    <ul className="dropdown-menu dropdown-menu-right " ref={_dropdownRef}>
-      <li>
-        <Link to='/' className='user-menu-anchor'>Home</Link>
-      </li>
-      <li>
-        <a className='user-menu-anchor' onClick={() => alertMessage('hi!') }>Say hi!</a>
-      </li>
-    </ul>
-  );
-
+const DropdownList = ({ isOn, alertMessage, alertLoading }) => {
   /**
    * Listen to props and change style
    */
-  function _dropdownRef(list){
-    if(!list) return;
+  const _domRef = (list) => {
+    if (!list) return;
 
-    if(isOn)list.classList.add('on');
+    if (isOn)list.classList.add('on');
     else list.classList.remove('on');
-  }
+  };
 
+  return (
+    <ul className="dropdown-menu dropdown-menu-right " ref={_domRef}>
+      <li>
+        <Link to="/" className="user-menu-anchor">Home</Link>
+      </li>
+      <li>
+        <a className="user-menu-anchor" onClick={() => alertMessage('hi!')}>Say hi!</a>
+      </li>
+    </ul>
+  );
 };
 
 export default DropdownList;

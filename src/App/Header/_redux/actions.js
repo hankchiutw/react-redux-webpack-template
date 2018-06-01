@@ -1,5 +1,3 @@
-"use strict";
-
 export const toggleUsermenu = () => ({
   type: 'TOGGLE_USERMENU'
 });

@@ -4,8 +4,21 @@ import Home from 'Home';
 import Page1 from 'Page1';
 import NewComponentFlow from 'NewComponentFlow';
 
-
 const Content = ({ isNavOn, label }) => {
+  /**
+   * Listen to props and change style
+   * TODO: use component style
+   */
+  const _domRef = (dom) => {
+    if (!dom) return;
+
+    if (isNavOn) {
+      dom.classList.add('nav-on');
+    } else {
+      dom.classList.remove('nav-on');
+    }
+  };
+
   return (
     <div className="content-wrapper" ref={_domRef}>
       <h2>{label}</h2>
@@ -18,20 +31,6 @@ const Content = ({ isNavOn, label }) => {
       </div>
     </div>
   );
-
-  /**
-   * Listen to props and change style
-   * TODO: use component style
-   */
-  function _domRef(dom) {
-    if (!dom) return;
-
-    if (isNavOn) {
-      dom.classList.add('nav-on');
-    } else {
-      dom.classList.remove('nav-on');
-    }
-  }
 };
 
 export default Content;

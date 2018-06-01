@@ -5,8 +5,6 @@ import Nav from './Nav';
 import Content from './Content';
 import Alert from './Alert';
 
-import combinedReducer from './_redux/combinedReducer';
-
 const App = ({ location }) => {
   const label = ({
     '/': 'Home',
@@ -24,4 +22,4 @@ const App = ({ location }) => {
 };
 
 export default App;
-export { combinedReducer };
+export { combinedReducer } from './_redux/combinedReducer';

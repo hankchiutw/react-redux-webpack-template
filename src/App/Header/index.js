@@ -1,19 +1,15 @@
-"use strict";
-
 import React from 'react';
-
-import actions from './_redux/actions';
-import reducers from './_redux/reducers';
 
 import Logo from './_redux/LogoContainer';
 import Usermenu from './_redux/UsermenuContainer';
 
 const Header = () => (
-  <div className='header-wrapper'>
+  <div className="header-wrapper">
     <Logo />
     <Usermenu />
   </div>
 );
 
 export default Header;
-export { actions, reducers };
+export { actions } from './_redux/actions';
+export { reducers } from './_redux/reducers';

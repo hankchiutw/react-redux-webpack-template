@@ -1,11 +1,11 @@
-"use strict";
-
 import React from 'react';
 
-const Alert = ({message, alertMessage}) => {
-  if(!message) return null;
-  if(message == 'loading') message = <img src="/images/loading.png" />;
-  else message = <span className='center cell'>{message}</span>;
+const Alert = ({ message, alertMessage }) => {
+  if (!message) return null;
+
+  message = ('loading' === message) ?
+    <img src="/images/loading.png" /> :
+    <span className="center cell">{message}</span>;
 
   setTimeout(() => {
     alertMessage('');

@@ -1,9 +1,22 @@
-
-
 import React from 'react';
 import { NavLink as Link } from 'react-router-dom';
 
 const Nav = ({ isOn }) => {
+  /**
+   * Listen to props and change style
+   */
+  const _domRef = (dom) => {
+    if (!dom) return;
+
+    if (isOn) {
+      dom.querySelector('.nav-wrapper').classList.add('on');
+      dom.querySelector('.content-mask').classList.add('on');
+    } else {
+      dom.querySelector('.nav-wrapper').classList.remove('on');
+      dom.querySelector('.content-mask').classList.remove('on');
+    }
+  };
+
   return (
     <div ref={_domRef}>
       <div className="nav-wrapper">
@@ -14,21 +27,6 @@ const Nav = ({ isOn }) => {
       <div className="content-mask" />
     </div>
   );
-
-  /**
-   * Listen to props and change style
-   */
-  function _domRef(dom) {
-    if (!dom) return;
-
-    if (isOn) {
-      dom.querySelector('.nav-wrapper').classList.add('on');
-      dom.querySelector('.content-mask').classList.add('on');
-    } else {
-      dom.querySelector('.nav-wrapper').classList.remove('on');
-      dom.querySelector('.content-mask').classList.remove('on');
-    }
-  }
 };
 
 export default Nav;

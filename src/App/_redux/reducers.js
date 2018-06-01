@@ -1,7 +1,5 @@
-"use strict";
-
 export const checkCurrentUser = (state = {}, action) => {
-  if (action.type != 'CHECK_CURRENT_USER') {
+  if (action.type !== 'CHECK_CURRENT_USER') {
     return {
       username: 'Guest'
     };

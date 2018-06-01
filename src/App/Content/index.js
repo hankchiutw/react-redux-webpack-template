@@ -1,5 +1,1 @@
-"use strict";
-
-import Content from './_redux/ContentContainer';
-
-export default Content;
+export { default } from './_redux/ContentContainer';
