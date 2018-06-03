@@ -8,8 +8,7 @@ let config = {
   output: {
     path: path.join(__dirname, './docs'),
     filename: '[name].bundle.js',
-    chunkFilename: '[name].bundle.js',
-    publicPath: './'
+    chunkFilename: '[name].bundle.js'
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -69,6 +68,10 @@ let config = {
             }
           }
         ]
+      },
+      {
+        test: /\.(jpg|png)$/,
+        loader: 'file-loader'
       },
       {
         test: /\.md$/,

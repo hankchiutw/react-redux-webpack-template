@@ -22,4 +22,4 @@ const App = ({ location }) => {
 };
 
 export default App;
-export { combinedReducer } from './_redux/combinedReducer';
+export { default as combinedReducer } from './_redux/combinedReducer';

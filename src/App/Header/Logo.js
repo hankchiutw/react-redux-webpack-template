@@ -1,4 +1,5 @@
 import React from 'react';
+import logoUrl from 'images/logo.png';
 
 const Logo = ({ isNavOn, toggleNav }) => {
   const anchorForMobile = (isNavOn ?
@@ -13,7 +14,7 @@ const Logo = ({ isNavOn, toggleNav }) => {
 
   return (
     <span className="logo">
-      <span className="cell hidden-xs" onClick={toggleNav}><img src="./images/logo.png" /></span>
+      <span className="cell hidden-xs" onClick={toggleNav}><img src={logoUrl} /></span>
       { anchorForMobile }
 
     </span>

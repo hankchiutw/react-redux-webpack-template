@@ -11,5 +11,5 @@ const Header = () => (
 );
 
 export default Header;
-export { actions } from './_redux/actions';
-export { reducers } from './_redux/reducers';
+export { default as actions } from './_redux/actions';
+export { default as reducers } from './_redux/reducers';
